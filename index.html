@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | BSc Computing Student</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background: var(--dark);
+            padding: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: var(--secondary);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .interest-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .interest-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>BSc Computing Student | Machine Learning & Cybersecurity Enthusiast</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate BSc Computing student with a strong interest in machine learning and cybersecurity. When I'm not coding or studying, you can find me enjoying anime, reading manga, playing chess, or discovering new music.</p>
+    </section>
+    
+    <section id="education" class="container" style="background: #f8f9fa;">
+        <h2>Education</h2>
+        <h3>BSc in Computing</h3>
+        <p>[Your University Name], [Expected Graduation Year]</p>
+        <p>Relevant coursework: Data Structures, Algorithms, Machine Learning Fundamentals, Network Security, Database Systems</p>
+    </section>
+    
+    <section id="skills" class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python (ML focus)</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div>
+                <h3>ML & Data Science</h3>
+                <ul>
+                    <li>TensorFlow/PyTorch</li>
+                    <li>Pandas/Numpy</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cybersecurity</h3>
+                <ul>
+                    <li>Network Security</li>
+                    <li>Ethical Hacking Basics</li>
+                    <li>Cryptography</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="interests" class="container" style="background: #f8f9fa;">
+        <h2>Personal Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <h3>Anime & Manga</h3>
+                <p>Avid fan of [your favorite genres]. Currently watching/reading [current favorites]. Love analyzing storytelling techniques and character development.</p>
+            </div>
+            <div class="interest-card">
+                <h3>Chess</h3>
+                <p>Regular player with [your rating if applicable]. Enjoy both classical and speed chess. Particularly interested in AI chess engines.</p>
+            </div>
+            <div class="interest-card">
+                <h3>Music</h3>
+                <p>[Your favorite genres/artists]. Play [any instruments if applicable]. Interested in the intersection of music and technology.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Machine Learning Project</h3>
+            <p>Description of your ML project, technologies used, and what you learned.</p>
+        </div>
+        <div class="project">
+            <h3>Cybersecurity Project</h3>
+            <p>Description of your security-related project, tools used, and outcomes.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    
+    <section id="contact" class="container" style="background: #f8f9fa;">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
