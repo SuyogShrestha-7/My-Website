@@ -144,6 +144,21 @@
         }
 
         typeEffect();
+        const cycleDuration = 25800;
+
+setTimeout(() => {
+  if (navigator.onLine) {
+    location.reload();
+  } else {
+    console.log("Offline, skipping reload.");
+  }
+}, cycleDuration);
+
+window.addEventListener('online', () => {
+  console.log('Network restored, reloading page...');
+  location.reload();
+});
+
     </script>
 </body>
 </html>
