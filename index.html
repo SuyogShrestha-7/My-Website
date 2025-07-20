@@ -1,195 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | BSc Computing Student</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Primary Meta Tags -->
+    <title>Suyog Shrestha | Portfolio</title>
+    <meta name="title" content="Suyog Shrestha | Portfolio | BSc Computing Student | Web Developer" />
+    <meta name="description" content="BSc Computing student and web developer with interests in cybersecurity and machine learning. Based in Nepal." />
+    <meta name="keywords" content="Suyog Shrestha, Web Developer Nepal, Cybersecurity Enthusiast, Machine Learning, BSc Computing Student" />
+    <meta name="author" content="Suyog Shrestha" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Suyog Shrestha | Portfolio" />
+    <meta property="og:description" content="BSc Computing student and web developer with interests in cybersecurity and machine learning." />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Suyog Shrestha Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Suyog Shrestha | Portfolio" />
+    <meta name="twitter:description" content="BSc Computing student and web developer with interests in cybersecurity and machine learning." />
+    <meta name="twitter:image" content="https://example.com/og-image.jpg" />
+
+    <!-- Favicon (replace with your own) -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--light);
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
-        
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        nav {
-            background: var(--dark);
-            padding: 1rem;
-        }
-        
-        nav ul {
+
+        body {
+            background: #0f172a;
+            color: #fff;
+            height: 100vh;
             display: flex;
             justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        
-        nav a:hover {
-            background: var(--secondary);
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            padding: 3rem 0;
-        }
-        
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .interest-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .interest-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        footer {
-            background: var(--dark);
-            color: white;
+            align-items: center;
             text-align: center;
-            padding: 2rem 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .changing-text {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #38bdf8;
+            display: inline-flex;
+            font-family: monospace;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: #38bdf8;
+            animation: blink 0.7s steps(1) infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .changing-text {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>BSc Computing Student | Machine Learning & Cybersecurity Enthusiast</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate BSc Computing student with a strong interest in machine learning and cybersecurity. When I'm not coding or studying, you can find me enjoying anime, reading manga, playing chess, or discovering new music.</p>
-    </section>
-    
-    <section id="education" class="container" style="background: #f8f9fa;">
-        <h2>Education</h2>
-        <h3>BSc in Computing</h3>
-        <p>[Your University Name], [Expected Graduation Year]</p>
-        <p>Relevant coursework: Data Structures, Algorithms, Machine Learning Fundamentals, Network Security, Database Systems</p>
-    </section>
-    
-    <section id="skills" class="container">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python (ML focus)</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div>
-                <h3>ML & Data Science</h3>
-                <ul>
-                    <li>TensorFlow/PyTorch</li>
-                    <li>Pandas/Numpy</li>
-                    <li>Data Visualization</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Cybersecurity</h3>
-                <ul>
-                    <li>Network Security</li>
-                    <li>Ethical Hacking Basics</li>
-                    <li>Cryptography</li>
-                </ul>
-            </div>
+    <div class="container">
+        <h1>Hello, I'm <span style="color:#4ade80;">Suyog Shrestha</span></h1>
+        <div class="changing-text">
+            <span id="animatedText"></span><span class="cursor"></span>
         </div>
-    </section>
-    
-    <section id="interests" class="container" style="background: #f8f9fa;">
-        <h2>Personal Interests</h2>
-        <div class="interests-grid">
-            <div class="interest-card">
-                <h3>Anime & Manga</h3>
-                <p>Avid fan of [your favorite genres]. Currently watching/reading [current favorites]. Love analyzing storytelling techniques and character development.</p>
-            </div>
-            <div class="interest-card">
-                <h3>Chess</h3>
-                <p>Regular player with [your rating if applicable]. Enjoy both classical and speed chess. Particularly interested in AI chess engines.</p>
-            </div>
-            <div class="interest-card">
-                <h3>Music</h3>
-                <p>[Your favorite genres/artists]. Play [any instruments if applicable]. Interested in the intersection of music and technology.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Machine Learning Project</h3>
-            <p>Description of your ML project, technologies used, and what you learned.</p>
-        </div>
-        <div class="project">
-            <h3>Cybersecurity Project</h3>
-            <p>Description of your security-related project, tools used, and outcomes.</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
-    
-    <section id="contact" class="container" style="background: #f8f9fa;">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
+    </div>
+
+    <script>
+        const roles = [
+            "Web Developer",
+            "Cybersecurity Enthusiast",
+            "Machine Learning Explorer",
+            "BSc Computing Student",
+            "Guitar Learner 🎸"
+        ];
+
+        const el = document.getElementById("animatedText");
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            el.innerText = currentRole.slice(0, charIndex);
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                    typeEffect();
+                }, 1200);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeEffect, 300);
+            } else {
+                const delay = isDeleting ? 50 : 100;
+                setTimeout(typeEffect, delay);
+            }
+        }
+
+        typeEffect();
+    </script>
 </body>
 </html>
