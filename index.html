@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="Main.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -34,129 +35,108 @@
 
     <!-- Favicon (replace with your own) -->
     <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="Main.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        body {
-            background: #0f172a;
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .changing-text {
-            font-size: 2rem;
-            font-weight: 500;
-            color: #38bdf8;
-            display: inline-flex;
-            font-family: monospace;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 2px;
-            background-color: #38bdf8;
-            animation: blink 0.7s steps(1) infinite;
-            margin-left: 2px;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            .changing-text {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Suyog Shrestha",
+      "jobTitle": "Web Developer",
+      "url": "https://yourdomain.com",
+      "sameAs": [
+        "https://linkedin.com/in/yourprofile",
+        "https://github.com/yourprofile",
+        "https://twitter.com/yourprofile"
+      ]
+    }
+    </script>
+  <title>Portfolio</title>
+  
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, I'm <span style="color:#4ade80;">Suyog Shrestha</span></h1>
-        <div class="changing-text">
-            <span id="animatedText"></span><span class="cursor"></span>
-        </div>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <div class="main-page">
+      <h1>Hello, I'm <span style="color:#4ade80;">Suyog Shrestha</span></h1>
+      <div class="changing-text">
+        <span id="animatedText"></span><span class="cursor"></span>
+      </div>
     </div>
+  </div>
 
-    <script>
-        const roles = [
-            "Web Developer",
-            "Cybersecurity",
-            "Machine Learning",
-            "Chess"
-        ];
+  <script>
+    const roles = [
+      "Web Developer",
+      "Cybersecurity Enthusiast",
+      "Machine Learning Explorer",
+      "BSc Computing Student",
+      "Guitar Learner 🎸",
+      "Chess Player"
+    ];
 
-        const el = document.getElementById("animatedText");
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+    const el = document.getElementById("animatedText");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-        function typeEffect() {
-            const currentRole = roles[roleIndex];
+    function typeEffect() {
+      const currentRole = roles[roleIndex];
 
-            if (isDeleting) {
-                charIndex--;
-            } else {
-                charIndex++;
-            }
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
 
-            el.innerText = currentRole.slice(0, charIndex);
+      el.innerText = currentRole.slice(0, charIndex);
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                setTimeout(() => {
-                    isDeleting = true;
-                    typeEffect();
-                }, 1200);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(typeEffect, 300);
-            } else {
-                const delay = isDeleting ? 50 : 100;
-                setTimeout(typeEffect, delay);
-            }
-        }
+      if (!isDeleting && charIndex === currentRole.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, 1200);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeEffect, 300);
+      } else {
+        const delay = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, delay);
+      }
+    }
 
-        typeEffect();
-        const cycleDuration = 25800;
+    typeEffect();
 
-setTimeout(() => {
-  if (navigator.onLine) {
-    location.reload();
-  } else {
-    console.log("Offline, skipping reload.");
-  }
-}, cycleDuration);
+    // Optional reload logic
+    const cycleDuration = 25800;
 
-window.addEventListener('online', () => {
-  console.log('Network restored, reloading page...');
-  location.reload();
-});
+    setTimeout(() => {
+      if (navigator.onLine) {
+        location.reload();
+      } else {
+        console.log("Offline, skipping reload.");
+      }
+    }, cycleDuration);
 
-    </script>
+    window.addEventListener('online', () => {
+      console.log('Network restored, reloading page...');
+      location.reload();
+    });
+  </script>
 </body>
+    <section class="blog">
+      
+    </section>
+
 </html>
