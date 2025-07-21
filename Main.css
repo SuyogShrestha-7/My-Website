@@ -1,0 +1,76 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      height: 5vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+      background-color: #fff;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    .main-container {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .changing-text {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #38bdf8;
+      display: inline-flex;
+      font-family: monospace;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      background-color: #38bdf8;
+      animation: blink 0.7s steps(1) infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .changing-text {
+        font-size: 1.5rem;
+      }
+    }
